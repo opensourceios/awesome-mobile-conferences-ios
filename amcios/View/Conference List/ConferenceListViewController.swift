@@ -165,14 +165,24 @@ extension ConferenceListViewController {
 // MARK: - Data source
 extension ConferenceListViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        // TODO: count years
         return MemoryDb.shared.data?.years.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let year = MemoryDb.shared.data?.years[section] else { return 0 }
         
-        return conferences?.filter({ conf -> Bool in
+        // is search active?
+        var items = isSearchActive ? filteredConferences : conferences
+        
+        // filter if favorite is on
+        if filterItems.selectedSegmentIndex == listType.favorite.hashValue {
+            items = items?.filter({ proj -> Bool in
+                return proj.isFavorite
+            })
+        }
+        
+        // return items
+        return items?.filter({ conf -> Bool in
             return conf.year == year
         }).count ?? 0
     }
@@ -181,11 +191,23 @@ extension ConferenceListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "conferenceCell") as! ConferenceDetailTableViewCell
         
         let year = MemoryDb.shared.data?.years[indexPath.section]
-        let yearConf = conferences?.filter({ conf -> Bool in
+        
+        // is search active?
+        var items = isSearchActive ? filteredConferences : conferences
+        
+        // filter if favorite is on
+        if filterItems.selectedSegmentIndex == listType.favorite.hashValue {
+            items = items?.filter({ proj -> Bool in
+                return proj.isFavorite
+            })
+        }
+        
+        // clean items
+        items = items?.filter({ conf -> Bool in
             return conf.year == year
         })
         
-        cell.setup(with: yearConf![indexPath.row], remove: year ?? 0)
+        cell.setup(with: items![indexPath.row], remove: year ?? 0)
         return cell
     }
 }
