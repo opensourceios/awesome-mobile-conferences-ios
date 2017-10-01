@@ -15,6 +15,7 @@
 		48CA8FFF1F811F0D004AD605 /* ConferenceList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48CA8FFE1F811F0D004AD605 /* ConferenceList.storyboard */; };
 		48CA90011F811F1A004AD605 /* ConferenceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CA90001F811F1A004AD605 /* ConferenceListViewController.swift */; };
 		48CA90031F811F4E004AD605 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CA90021F811F4E004AD605 /* BaseViewController.swift */; };
+		48CA90061F8120BC004AD605 /* AMCApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CA90051F8120BC004AD605 /* AMCApi.swift */; };
 		D7BFC0173056FCAC42F9DD20 /* Pods_amcios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333FD57E888A7F8FC4B51B31 /* Pods_amcios.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		48CA90001F811F1A004AD605 /* ConferenceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceListViewController.swift; sourceTree = "<group>"; };
 		48CA90021F811F4E004AD605 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		48CA90041F811F80004AD605 /* amcios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = amcios.entitlements; sourceTree = "<group>"; };
+		48CA90051F8120BC004AD605 /* AMCApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMCApi.swift; sourceTree = "<group>"; };
 		59F0C22ED01F4FEC7AF27C31 /* Pods-amcios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amcios.release.xcconfig"; path = "Pods/Target Support Files/Pods-amcios/Pods-amcios.release.xcconfig"; sourceTree = "<group>"; };
 		F6B0E50155E5EF56BD9EE6DE /* Pods-amcios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amcios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-amcios/Pods-amcios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +100,7 @@
 		48CA8FF61F811EB8004AD605 /* Net */ = {
 			isa = PBXGroup;
 			children = (
+				48CA90051F8120BC004AD605 /* AMCApi.swift */,
 			);
 			path = Net;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			files = (
 				48CA90011F811F1A004AD605 /* ConferenceListViewController.swift in Sources */,
 				48CA90031F811F4E004AD605 /* BaseViewController.swift in Sources */,
+				48CA90061F8120BC004AD605 /* AMCApi.swift in Sources */,
 				48CA8FFD1F811F01004AD605 /* ConferenceDetailViewController.swift in Sources */,
 				48B194061F79938800A36B9E /* AppDelegate.swift in Sources */,
 			);
