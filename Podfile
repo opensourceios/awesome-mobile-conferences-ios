@@ -5,7 +5,8 @@ use_frameworks!
 target 'amcios' do
     pod 'Alamofire', '~> 4.5.1'
     pod 'SwiftDate', '~> 4.4.1'
-    pod 'SwiftyJSON', '~> 3.1.4'
+    pod 'Exteptional', '~> 0.2.6'
+    pod 'OneSignal', '~> 2.5.4'
 end
 
 post_install do |installer|
