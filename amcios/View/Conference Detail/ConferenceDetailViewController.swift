@@ -14,7 +14,14 @@ class ConferenceDetailViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // set title
         title = conference?.title
+        
+        // set navigation
+        navigationItem.hidesSearchBarWhenScrolling = true
+        navigationItem.hidesBackButton = false
+        navigationItem.largeTitleDisplayMode = .automatic
+        navigationController?.navigationBar.tintColor = .awesomeColor
     }
 
     override func didReceiveMemoryWarning() {

@@ -78,7 +78,10 @@ class ConferenceListViewController: BaseViewController {
     
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let vc = segue.destination as? ConferenceDetailViewController else { return }
-        //vc.conference = conferences[table]
+        guard let index = table.indexPathForSelectedRow else { return }
+
+        vc.conference = getItem(index)
+        table.deselectRow(at: index, animated: true)
     }
     
 }
@@ -189,8 +192,25 @@ extension ConferenceListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "conferenceCell") as! ConferenceDetailTableViewCell
-        
         let year = MemoryDb.shared.data?.years[indexPath.section]
+        cell.setup(with: getItem(indexPath), remove: year ?? 0)
+        return cell
+    }
+}
+
+// MARK: - Table delegate
+extension ConferenceListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let year = MemoryDb.shared.data?.years[section] ?? 0
+        return "\(year)"
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetail", sender: self)
+    }
+    
+    func getItem(_ index:IndexPath) -> Conference {
+        let year = MemoryDb.shared.data?.years[index.section]
         
         // is search active?
         var items = isSearchActive ? filteredConferences : conferences
@@ -207,15 +227,6 @@ extension ConferenceListViewController: UITableViewDataSource {
             return conf.year == year
         })
         
-        cell.setup(with: items![indexPath.row], remove: year ?? 0)
-        return cell
-    }
-}
-
-// MARK: - Table delegate
-extension ConferenceListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let year = MemoryDb.shared.data?.years[section] ?? 0
-        return "\(year)"
+        return items![index.row]
     }
 }

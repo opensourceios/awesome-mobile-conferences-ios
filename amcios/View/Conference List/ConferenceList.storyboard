@@ -73,7 +73,6 @@
                                             <outlet property="conferenceDate" destination="TRw-JV-gPC" id="WQA-E3-5gN"/>
                                             <outlet property="conferenceFavorite" destination="Ckd-kH-DXa" id="8iG-BD-nY1"/>
                                             <outlet property="conferenceTitle" destination="9Qw-Xa-ZaW" id="K2e-Qa-yy4"/>
-                                            <segue destination="mu6-dh-zW8" kind="show" id="OP5-hd-ewb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -110,6 +109,7 @@
                     <connections>
                         <outlet property="filterItems" destination="H8e-UK-7eV" id="jR0-Om-kt7"/>
                         <outlet property="table" destination="RQ6-ku-ikF" id="fxc-ni-u23"/>
+                        <segue destination="mu6-dh-zW8" kind="show" identifier="showDetail" id="9ai-L4-Q65"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blj-NF-nMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
