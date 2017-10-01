@@ -18,6 +18,24 @@ struct Conference: Codable {
     let country: String
     let callforpaper: Bool
     
+    /// runtime value useful for sorting
+    private var dateFormatter = DateFormatter()
+    var start: Date? {
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        return dateFormatter.date(from: startdate)
+    }
+    
+    /// Check if project is favorite locally (sync via iCloud)
+    var isFavorite: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: homepage)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: homepage)
+            UserDefaults.standard.synchronize()
+        }
+    }
+    
     enum CodingKeys: String, CodingKey {
         
         case title

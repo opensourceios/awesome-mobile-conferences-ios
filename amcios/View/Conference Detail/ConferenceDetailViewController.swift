@@ -9,11 +9,12 @@
 import UIKit
 
 class ConferenceDetailViewController: BaseViewController {
+    
+    var conference: Conference?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        title = conference?.title
     }
 
     override func didReceiveMemoryWarning() {

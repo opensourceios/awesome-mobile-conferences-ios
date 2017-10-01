@@ -14,4 +14,5 @@ struct Awesome: Codable {
     let header_contributing: String?
     let ios_app_link: String?
     let conferences: [Conference]
+    let years: [Int]
 }
