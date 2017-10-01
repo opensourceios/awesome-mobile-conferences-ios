@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		48B194061F79938800A36B9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B194051F79938800A36B9E /* AppDelegate.swift */; };
-		48B194081F79938800A36B9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B194071F79938800A36B9E /* ViewController.swift */; };
-		48B1940B1F79938800A36B9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B194091F79938800A36B9E /* Main.storyboard */; };
 		48B1940D1F79938800A36B9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48B1940C1F79938800A36B9E /* Assets.xcassets */; };
 		48B194101F79938800A36B9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B1940E1F79938800A36B9E /* LaunchScreen.storyboard */; };
+		48CA8FFB1F811EE4004AD605 /* ConferenceDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48CA8FFA1F811EE4004AD605 /* ConferenceDetail.storyboard */; };
+		48CA8FFD1F811F01004AD605 /* ConferenceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CA8FFC1F811F01004AD605 /* ConferenceDetailViewController.swift */; };
+		48CA8FFF1F811F0D004AD605 /* ConferenceList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48CA8FFE1F811F0D004AD605 /* ConferenceList.storyboard */; };
+		48CA90011F811F1A004AD605 /* ConferenceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CA90001F811F1A004AD605 /* ConferenceListViewController.swift */; };
+		48CA90031F811F4E004AD605 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CA90021F811F4E004AD605 /* BaseViewController.swift */; };
 		D7BFC0173056FCAC42F9DD20 /* Pods_amcios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333FD57E888A7F8FC4B51B31 /* Pods_amcios.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,11 +22,15 @@
 		333FD57E888A7F8FC4B51B31 /* Pods_amcios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amcios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B194021F79938800A36B9E /* amcios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amcios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B194051F79938800A36B9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		48B194071F79938800A36B9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		48B1940A1F79938800A36B9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48B1940C1F79938800A36B9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48B1940F1F79938800A36B9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48B194111F79938800A36B9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48CA8FFA1F811EE4004AD605 /* ConferenceDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConferenceDetail.storyboard; sourceTree = "<group>"; };
+		48CA8FFC1F811F01004AD605 /* ConferenceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDetailViewController.swift; sourceTree = "<group>"; };
+		48CA8FFE1F811F0D004AD605 /* ConferenceList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConferenceList.storyboard; sourceTree = "<group>"; };
+		48CA90001F811F1A004AD605 /* ConferenceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceListViewController.swift; sourceTree = "<group>"; };
+		48CA90021F811F4E004AD605 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		48CA90041F811F80004AD605 /* amcios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = amcios.entitlements; sourceTree = "<group>"; };
 		59F0C22ED01F4FEC7AF27C31 /* Pods-amcios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amcios.release.xcconfig"; path = "Pods/Target Support Files/Pods-amcios/Pods-amcios.release.xcconfig"; sourceTree = "<group>"; };
 		F6B0E50155E5EF56BD9EE6DE /* Pods-amcios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amcios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-amcios/Pods-amcios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,14 +76,58 @@
 		48B194041F79938800A36B9E /* amcios */ = {
 			isa = PBXGroup;
 			children = (
+				48CA90041F811F80004AD605 /* amcios.entitlements */,
+				48CA8FF71F811EBF004AD605 /* View */,
+				48CA8FF61F811EB8004AD605 /* Net */,
+				48CA8FF51F811EA8004AD605 /* Model */,
 				48B194051F79938800A36B9E /* AppDelegate.swift */,
-				48B194071F79938800A36B9E /* ViewController.swift */,
-				48B194091F79938800A36B9E /* Main.storyboard */,
 				48B1940C1F79938800A36B9E /* Assets.xcassets */,
 				48B1940E1F79938800A36B9E /* LaunchScreen.storyboard */,
 				48B194111F79938800A36B9E /* Info.plist */,
 			);
 			path = amcios;
+			sourceTree = "<group>";
+		};
+		48CA8FF51F811EA8004AD605 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		48CA8FF61F811EB8004AD605 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		48CA8FF71F811EBF004AD605 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48CA8FF91F811ED3004AD605 /* Conference Detail */,
+				48CA8FF81F811EC5004AD605 /* Conference List */,
+				48CA90021F811F4E004AD605 /* BaseViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		48CA8FF81F811EC5004AD605 /* Conference List */ = {
+			isa = PBXGroup;
+			children = (
+				48CA8FFE1F811F0D004AD605 /* ConferenceList.storyboard */,
+				48CA90001F811F1A004AD605 /* ConferenceListViewController.swift */,
+			);
+			path = "Conference List";
+			sourceTree = "<group>";
+		};
+		48CA8FF91F811ED3004AD605 /* Conference Detail */ = {
+			isa = PBXGroup;
+			children = (
+				48CA8FFA1F811EE4004AD605 /* ConferenceDetail.storyboard */,
+				48CA8FFC1F811F01004AD605 /* ConferenceDetailViewController.swift */,
+			);
+			path = "Conference Detail";
 			sourceTree = "<group>";
 		};
 		D1E376412565C73A4D7D6BF6 /* Pods */ = {
@@ -124,6 +175,11 @@
 					48B194011F79938800A36B9E = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -150,9 +206,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48CA8FFF1F811F0D004AD605 /* ConferenceList.storyboard in Resources */,
 				48B194101F79938800A36B9E /* LaunchScreen.storyboard in Resources */,
+				48CA8FFB1F811EE4004AD605 /* ConferenceDetail.storyboard in Resources */,
 				48B1940D1F79938800A36B9E /* Assets.xcassets in Resources */,
-				48B1940B1F79938800A36B9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48B194081F79938800A36B9E /* ViewController.swift in Sources */,
+				48CA90011F811F1A004AD605 /* ConferenceListViewController.swift in Sources */,
+				48CA90031F811F4E004AD605 /* BaseViewController.swift in Sources */,
+				48CA8FFD1F811F01004AD605 /* ConferenceDetailViewController.swift in Sources */,
 				48B194061F79938800A36B9E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,14 +288,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		48B194091F79938800A36B9E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				48B1940A1F79938800A36B9E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		48B1940E1F79938800A36B9E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -360,6 +411,7 @@
 			baseConfigurationReference = F6B0E50155E5EF56BD9EE6DE /* Pods-amcios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = amcios/amcios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9FTQCB4H8;
 				INFOPLIST_FILE = amcios/Info.plist;
@@ -377,6 +429,7 @@
 			baseConfigurationReference = 59F0C22ED01F4FEC7AF27C31 /* Pods-amcios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = amcios/amcios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F9FTQCB4H8;
 				INFOPLIST_FILE = amcios/Info.plist;
