@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate {
-    func setupPush(launchOptions: [UIApplicationLaunchOptionsKey: Any]?) {
+    func setupPush(_ launchOptions: [UIApplicationLaunchOptionsKey: Any]?) {
         let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
 
         // WARN: Replace 'YOUR_APP_ID' with your OneSignal App ID.
