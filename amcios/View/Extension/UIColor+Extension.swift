@@ -10,6 +10,6 @@ import UIKit
 
 extension UIColor {
     class var awesomeColor: UIColor {
-        return UIColor(red: 228/255.0, green: 45/255.0, blue: 89/255.0, alpha: 1.0)
+        return UIColor(red: 63/255.0, green: 81/255.0, blue: 181/255.0, alpha: 1.0)
     }
 }
