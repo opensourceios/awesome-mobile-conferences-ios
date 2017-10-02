@@ -22,6 +22,7 @@
 		48CA900F1F813F8A004AD605 /* ConferenceDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CA900E1F813F8A004AD605 /* ConferenceDetailTableViewCell.swift */; };
 		48CA90111F8144EB004AD605 /* Year.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CA90101F8144EB004AD605 /* Year.swift */; };
 		48CA90141F81841E004AD605 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CA90131F81841E004AD605 /* UIColor+Extension.swift */; };
+		48E6E4811F8268ED0081BE65 /* AwesomeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E6E4801F8268ED0081BE65 /* AwesomeAnnotation.swift */; };
 		D7BFC0173056FCAC42F9DD20 /* Pods_amcios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333FD57E888A7F8FC4B51B31 /* Pods_amcios.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		48CA900E1F813F8A004AD605 /* ConferenceDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConferenceDetailTableViewCell.swift; sourceTree = "<group>"; };
 		48CA90101F8144EB004AD605 /* Year.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Year.swift; sourceTree = "<group>"; };
 		48CA90131F81841E004AD605 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		48E6E4801F8268ED0081BE65 /* AwesomeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeAnnotation.swift; sourceTree = "<group>"; };
 		59F0C22ED01F4FEC7AF27C31 /* Pods-amcios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amcios.release.xcconfig"; path = "Pods/Target Support Files/Pods-amcios/Pods-amcios.release.xcconfig"; sourceTree = "<group>"; };
 		F6B0E50155E5EF56BD9EE6DE /* Pods-amcios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amcios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-amcios/Pods-amcios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +147,7 @@
 		48CA8FF91F811ED3004AD605 /* Conference Detail */ = {
 			isa = PBXGroup;
 			children = (
+				48E6E47F1F8268CF0081BE65 /* Map Annotation */,
 				48CA8FFA1F811EE4004AD605 /* ConferenceDetail.storyboard */,
 				48CA8FFC1F811F01004AD605 /* ConferenceDetailViewController.swift */,
 			);
@@ -165,6 +168,14 @@
 				48CA90131F81841E004AD605 /* UIColor+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		48E6E47F1F8268CF0081BE65 /* Map Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				48E6E4801F8268ED0081BE65 /* AwesomeAnnotation.swift */,
+			);
+			path = "Map Annotation";
 			sourceTree = "<group>";
 		};
 		D1E376412565C73A4D7D6BF6 /* Pods */ = {
@@ -324,6 +335,7 @@
 				48CA90141F81841E004AD605 /* UIColor+Extension.swift in Sources */,
 				48CA90011F811F1A004AD605 /* ConferenceListViewController.swift in Sources */,
 				48CA90031F811F4E004AD605 /* BaseViewController.swift in Sources */,
+				48E6E4811F8268ED0081BE65 /* AwesomeAnnotation.swift in Sources */,
 				48CA90061F8120BC004AD605 /* AMCApi.swift in Sources */,
 				48CA900A1F812160004AD605 /* Conference.swift in Sources */,
 				48CA90081F812126004AD605 /* Awesome.swift in Sources */,
