@@ -17,14 +17,14 @@ struct Conference: Codable {
     let homepage: String
     let country: String
     let callforpaper: Bool
-    
+
     /// runtime value useful for sorting
     private var dateFormatter = DateFormatter()
     var start: Date? {
         dateFormatter.dateFormat = "yyyy/MM/dd"
         return dateFormatter.date(from: startdate)
     }
-    
+
     /// Check if project is favorite locally (sync via iCloud)
     var isFavorite: Bool {
         get {
@@ -35,9 +35,9 @@ struct Conference: Codable {
             UserDefaults.standard.synchronize()
         }
     }
-    
+
     enum CodingKeys: String, CodingKey {
-        
+
         case title
         case year
         case startdate
@@ -45,7 +45,7 @@ struct Conference: Codable {
         case homepage
         case country
         case callforpaper
-        
+
         case location = "where"
     }
 }

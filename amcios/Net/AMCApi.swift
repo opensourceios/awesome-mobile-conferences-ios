@@ -18,5 +18,5 @@ class AMCApi {
             return nil
         }
     }
-    
+
 }

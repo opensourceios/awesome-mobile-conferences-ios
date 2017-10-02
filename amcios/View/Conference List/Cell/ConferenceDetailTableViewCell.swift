@@ -9,11 +9,11 @@
 import UIKit
 
 class ConferenceDetailTableViewCell: UITableViewCell {
-    
+
     @IBOutlet weak var conferenceTitle: UILabel!
     @IBOutlet weak var conferenceDate: UILabel!
     @IBOutlet weak var conferenceFavorite: UIButton!
-    
+
     private var conference: Conference?
 
     override func awakeFromNib() {
@@ -31,13 +31,13 @@ class ConferenceDetailTableViewCell: UITableViewCell {
         conferenceFavorite.tintColor = .awesomeColor
         updateButtonUI()
     }
-    
+
     @IBAction func triggerFavorite() {
         guard let conference = conference else { return }
         self.conference?.isFavorite = !conference.isFavorite
         updateButtonUI()
     }
-    
+
     private func updateButtonUI() {
         guard let conference = conference else { return }
         conferenceFavorite.alpha = conference.isFavorite ? 1.0 : 0.5

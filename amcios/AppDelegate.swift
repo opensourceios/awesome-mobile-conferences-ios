@@ -35,18 +35,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     func setupPush(launchOptions: [UIApplicationLaunchOptionsKey: Any]?) {
         let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
-        
+
         // WARN: Replace 'YOUR_APP_ID' with your OneSignal App ID.
         OneSignal.initWithLaunchOptions(launchOptions,
                                         appId: "YOUR_APP_ID",
                                         handleNotificationAction: nil,
                                         settings: onesignalInitSettings)
-        
-        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
-        
+
+        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification
+
         OneSignal.promptForPushNotifications(userResponse: { accepted in
             print("User accepted notifications: \(accepted)")
         })
     }
 }
-
