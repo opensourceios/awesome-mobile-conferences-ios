@@ -125,6 +125,9 @@
                                                     <constraint firstAttribute="height" constant="280" id="EWe-VI-l66"/>
                                                 </constraints>
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="OEr-9k-JU5" id="mMk-Uv-9Be"/>
+                                                </connections>
                                             </mapView>
                                         </subviews>
                                     </stackView>

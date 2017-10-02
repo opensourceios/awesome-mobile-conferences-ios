@@ -21,6 +21,9 @@ class ConferenceDetailViewController: BaseViewController {
     
     var conference: Conference?
     
+    private let geoCoder = CLGeocoder()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // set title
@@ -41,6 +44,14 @@ class ConferenceDetailViewController: BaseViewController {
         
         // populate UI
         populateUI()
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // update map
+        populateMap()
     }
     
     override func didReceiveMemoryWarning() {
@@ -51,7 +62,7 @@ class ConferenceDetailViewController: BaseViewController {
 
 // MARK: - Data
 extension ConferenceDetailViewController {
-    func populateUI() {
+    fileprivate func populateUI() {
         guard let conference = conference else { return }
         
         // set buttons
@@ -61,12 +72,9 @@ extension ConferenceDetailViewController {
         startDateLabel.text = conference.startdate
         endDateLabel.text = conference.enddate
         countryLabel.text = conference.country
-        
-        // update map
-        populateMap()
     }
     
-    private func populateMap() {
+    fileprivate func populateMap() {
         guard let conference = conference else { return }
         getLocationFrom(address: conference.location)
     }
@@ -80,7 +88,11 @@ extension ConferenceDetailViewController {
     }
     
     @objc func openMap(_ sender: UITapGestureRecognizer) {
-        guard let conference = conference, let url = URL(string: "http://maps.apple.com/maps?saddr=\(String(describing: conference.location.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)))") else { return }
+        guard
+            let conference = conference,
+            let encodedAddress = conference.location.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed),
+            let url = URL(string: "http://maps.apple.com/maps?saddr=\(encodedAddress)")
+        else { return }
         UIApplication.shared.open(url)
     }
 }
@@ -89,7 +101,6 @@ extension ConferenceDetailViewController {
 extension ConferenceDetailViewController: MKMapViewDelegate {
     
     fileprivate func getLocationFrom(address: String) {
-        let geoCoder = CLGeocoder()
         geoCoder.geocodeAddressString(address) { (placemarks, error) in
             guard
                 let placemarks = placemarks,
@@ -117,7 +128,7 @@ extension ConferenceDetailViewController: MKMapViewDelegate {
     }
     
     func centerMapOnLocation(location: CLLocation) {
-        let regionRadius: CLLocationDistance = 200
+        let regionRadius: CLLocationDistance = 400
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
