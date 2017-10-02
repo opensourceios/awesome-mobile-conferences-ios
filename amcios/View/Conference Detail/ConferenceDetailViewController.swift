@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import MapKit
 
 class ConferenceDetailViewController: BaseViewController {
     
+    @IBOutlet weak var websiteButton: UIButton!
+    
+    @IBOutlet weak var startDateLabel: UILabel!
+    @IBOutlet weak var endDateLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
     var conference: Conference?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // set title
@@ -22,22 +31,46 @@ class ConferenceDetailViewController: BaseViewController {
         navigationItem.hidesBackButton = false
         navigationItem.largeTitleDisplayMode = .automatic
         navigationController?.navigationBar.tintColor = .awesomeColor
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        // set button tint
+        websiteButton.tintColor = .awesomeColor
+        
+        // populate UI
+        populateUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
-    */
+    
+}
 
+// MARK: - Data
+extension ConferenceDetailViewController {
+    func populateUI() {
+        guard let conference = conference else { return }
+        
+        // set buttons
+        websiteButton.setTitle(conference.homepage, for: .normal)
+        
+        // set labels
+        startDateLabel.text = conference.startdate
+        endDateLabel.text = conference.enddate
+        countryLabel.text = conference.country
+        
+        // update map
+        populateMap()
+    }
+    
+    private func populateMap() {
+        
+    }
+}
+
+// MARK: - Action
+extension ConferenceDetailViewController {
+    @IBAction func openLink() {
+        guard let conference = conference, let url = URL(string: conference.homepage) else { return }
+        UIApplication.shared.open(url)
+    }
 }
