@@ -614,7 +614,7 @@
 				INFOPLIST_FILE = amcios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = boostco.de.amc.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = boostco.de.amc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -633,7 +633,7 @@
 				INFOPLIST_FILE = amcios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = boostco.de.amc.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = boostco.de.amc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -648,11 +648,11 @@
 				DEVELOPMENT_TEAM = F9FTQCB4H8;
 				INFOPLIST_FILE = "amc-notification/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "boostco.de.amc.ios.amc-notification";
+				PRODUCT_BUNDLE_IDENTIFIER = boostco.de.amc.notification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -664,11 +664,11 @@
 				DEVELOPMENT_TEAM = F9FTQCB4H8;
 				INFOPLIST_FILE = "amc-notification/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "boostco.de.amc.ios.amc-notification";
+				PRODUCT_BUNDLE_IDENTIFIER = boostco.de.amc.notification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
