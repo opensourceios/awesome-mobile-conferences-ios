@@ -23,10 +23,38 @@
 		48CA90111F8144EB004AD605 /* Year.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CA90101F8144EB004AD605 /* Year.swift */; };
 		48CA90141F81841E004AD605 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CA90131F81841E004AD605 /* UIColor+Extension.swift */; };
 		48E6E4811F8268ED0081BE65 /* AwesomeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E6E4801F8268ED0081BE65 /* AwesomeAnnotation.swift */; };
+		48E6E4891F82751D0081BE65 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E6E4881F82751D0081BE65 /* NotificationService.swift */; };
+		48E6E48D1F82751D0081BE65 /* amc-notification.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 48E6E4861F82751D0081BE65 /* amc-notification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D7BFC0173056FCAC42F9DD20 /* Pods_amcios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333FD57E888A7F8FC4B51B31 /* Pods_amcios.framework */; };
+		E1E5E71AB259A4CDFDEEE127 /* Pods_amc_notification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 714E3A18A6AF7C8F7F90F110 /* Pods_amc_notification.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		48E6E48B1F82751D0081BE65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48B193FA1F79938800A36B9E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48E6E4851F82751D0081BE65;
+			remoteInfo = "amc-notification";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		48E6E4911F82751D0081BE65 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				48E6E48D1F82751D0081BE65 /* amc-notification.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		332737BF562715AB1BEAB75B /* Pods-amc-notification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amc-notification.release.xcconfig"; path = "Pods/Target Support Files/Pods-amc-notification/Pods-amc-notification.release.xcconfig"; sourceTree = "<group>"; };
 		333FD57E888A7F8FC4B51B31 /* Pods_amcios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amcios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B194021F79938800A36B9E /* amcios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amcios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48B194051F79938800A36B9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,8 +75,13 @@
 		48CA90101F8144EB004AD605 /* Year.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Year.swift; sourceTree = "<group>"; };
 		48CA90131F81841E004AD605 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		48E6E4801F8268ED0081BE65 /* AwesomeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeAnnotation.swift; sourceTree = "<group>"; };
+		48E6E4861F82751D0081BE65 /* amc-notification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "amc-notification.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48E6E4881F82751D0081BE65 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		48E6E48A1F82751D0081BE65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59F0C22ED01F4FEC7AF27C31 /* Pods-amcios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amcios.release.xcconfig"; path = "Pods/Target Support Files/Pods-amcios/Pods-amcios.release.xcconfig"; sourceTree = "<group>"; };
+		714E3A18A6AF7C8F7F90F110 /* Pods_amc_notification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amc_notification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B0E50155E5EF56BD9EE6DE /* Pods-amcios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amcios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-amcios/Pods-amcios.debug.xcconfig"; sourceTree = "<group>"; };
+		FE40496574EC1978B350E6FC /* Pods-amc-notification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amc-notification.debug.xcconfig"; path = "Pods/Target Support Files/Pods-amc-notification/Pods-amc-notification.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +93,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		48E6E4831F82751D0081BE65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1E5E71AB259A4CDFDEEE127 /* Pods_amc_notification.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -67,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				333FD57E888A7F8FC4B51B31 /* Pods_amcios.framework */,
+				714E3A18A6AF7C8F7F90F110 /* Pods_amc_notification.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -75,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				48B194041F79938800A36B9E /* amcios */,
+				48E6E4871F82751D0081BE65 /* amc-notification */,
 				48B194031F79938800A36B9E /* Products */,
 				D1E376412565C73A4D7D6BF6 /* Pods */,
 				06E456EDE66AFA149FCC9AEF /* Frameworks */,
@@ -85,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				48B194021F79938800A36B9E /* amcios.app */,
+				48E6E4861F82751D0081BE65 /* amc-notification.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,11 +222,22 @@
 			path = "Map Annotation";
 			sourceTree = "<group>";
 		};
+		48E6E4871F82751D0081BE65 /* amc-notification */ = {
+			isa = PBXGroup;
+			children = (
+				48E6E4881F82751D0081BE65 /* NotificationService.swift */,
+				48E6E48A1F82751D0081BE65 /* Info.plist */,
+			);
+			path = "amc-notification";
+			sourceTree = "<group>";
+		};
 		D1E376412565C73A4D7D6BF6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				F6B0E50155E5EF56BD9EE6DE /* Pods-amcios.debug.xcconfig */,
 				59F0C22ED01F4FEC7AF27C31 /* Pods-amcios.release.xcconfig */,
+				FE40496574EC1978B350E6FC /* Pods-amc-notification.debug.xcconfig */,
+				332737BF562715AB1BEAB75B /* Pods-amc-notification.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -200,15 +255,36 @@
 				48B194001F79938800A36B9E /* Resources */,
 				1A9F3E51729B1F46139F0696 /* [CP] Embed Pods Frameworks */,
 				5C9BE18BD028E6CD14D1CCB7 /* [CP] Copy Pods Resources */,
+				48E6E4911F82751D0081BE65 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				48E6E48C1F82751D0081BE65 /* PBXTargetDependency */,
 			);
 			name = amcios;
 			productName = amcios;
 			productReference = 48B194021F79938800A36B9E /* amcios.app */;
 			productType = "com.apple.product-type.application";
+		};
+		48E6E4851F82751D0081BE65 /* amc-notification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48E6E48E1F82751D0081BE65 /* Build configuration list for PBXNativeTarget "amc-notification" */;
+			buildPhases = (
+				0C54FE2C5668F6C649B687B0 /* [CP] Check Pods Manifest.lock */,
+				48E6E4821F82751D0081BE65 /* Sources */,
+				48E6E4831F82751D0081BE65 /* Frameworks */,
+				48E6E4841F82751D0081BE65 /* Resources */,
+				5F3CFB91D27BDC453328DB69 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "amc-notification";
+			productName = "amc-notification";
+			productReference = 48E6E4861F82751D0081BE65 /* amc-notification.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -232,6 +308,10 @@
 							};
 						};
 					};
+					48E6E4851F82751D0081BE65 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 48B193FD1F79938800A36B9E /* Build configuration list for PBXProject "amcios" */;
@@ -248,6 +328,7 @@
 			projectRoot = "";
 			targets = (
 				48B194011F79938800A36B9E /* amcios */,
+				48E6E4851F82751D0081BE65 /* amc-notification */,
 			);
 		};
 /* End PBXProject section */
@@ -261,6 +342,13 @@
 				48B194101F79938800A36B9E /* LaunchScreen.storyboard in Resources */,
 				48CA8FFB1F811EE4004AD605 /* ConferenceDetail.storyboard in Resources */,
 				48B1940D1F79938800A36B9E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48E6E4841F82751D0081BE65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +367,24 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-amcios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0C54FE2C5668F6C649B687B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-amc-notification-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -322,6 +428,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-amcios/Pods-amcios-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5F3CFB91D27BDC453328DB69 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-amc-notification/Pods-amc-notification-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -344,7 +465,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		48E6E4821F82751D0081BE65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48E6E4891F82751D0081BE65 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48E6E48C1F82751D0081BE65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48E6E4851F82751D0081BE65 /* amc-notification */;
+			targetProxy = 48E6E48B1F82751D0081BE65 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		48B1940E1F79938800A36B9E /* LaunchScreen.storyboard */ = {
@@ -469,6 +606,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F6B0E50155E5EF56BD9EE6DE /* Pods-amcios.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = amcios/amcios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -487,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 59F0C22ED01F4FEC7AF27C31 /* Pods-amcios.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = amcios/amcios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -498,6 +637,38 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		48E6E48F1F82751D0081BE65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE40496574EC1978B350E6FC /* Pods-amc-notification.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F9FTQCB4H8;
+				INFOPLIST_FILE = "amc-notification/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "boostco.de.amc.ios.amc-notification";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		48E6E4901F82751D0081BE65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 332737BF562715AB1BEAB75B /* Pods-amc-notification.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F9FTQCB4H8;
+				INFOPLIST_FILE = "amc-notification/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "boostco.de.amc.ios.amc-notification";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -518,6 +689,15 @@
 			buildConfigurations = (
 				48B194151F79938800A36B9E /* Debug */,
 				48B194161F79938800A36B9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48E6E48E1F82751D0081BE65 /* Build configuration list for PBXNativeTarget "amc-notification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48E6E48F1F82751D0081BE65 /* Debug */,
+				48E6E4901F82751D0081BE65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

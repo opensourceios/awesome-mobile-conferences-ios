@@ -9,6 +9,10 @@ target 'amcios' do
     pod 'OneSignal', '~> 2.5.4'
 end
 
+target 'amc-notification' do
+    pod 'OneSignal', '~> 2.5.4'
+end
+
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
