@@ -16,6 +16,7 @@ struct Conference: Codable {
     let location: String
     let homepage: String
     let country: String
+    let emojiflag: String
     let callforpaper: Bool
 
     /// runtime value useful for sorting
@@ -45,6 +46,7 @@ struct Conference: Codable {
         case homepage
         case country
         case callforpaper
+        case emojiflag
 
         case location = "where"
     }

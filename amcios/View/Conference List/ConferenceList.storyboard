@@ -42,8 +42,14 @@
                                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qw-Xa-ZaW">
-                                                            <rect key="frame" x="50" y="0.0" width="267" height="31.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxy-lQ-lyI">
+                                                            <rect key="frame" x="50" y="0.0" width="42" height="31.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qw-Xa-ZaW">
+                                                            <rect key="frame" x="102" y="0.0" width="215" height="31.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -72,6 +78,7 @@
                                         <connections>
                                             <outlet property="conferenceDate" destination="TRw-JV-gPC" id="WQA-E3-5gN"/>
                                             <outlet property="conferenceFavorite" destination="Ckd-kH-DXa" id="8iG-BD-nY1"/>
+                                            <outlet property="conferenceFlag" destination="gxy-lQ-lyI" id="Ie0-uI-Sa8"/>
                                             <outlet property="conferenceTitle" destination="9Qw-Xa-ZaW" id="K2e-Qa-yy4"/>
                                         </connections>
                                     </tableViewCell>

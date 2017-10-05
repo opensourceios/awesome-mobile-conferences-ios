@@ -9,7 +9,8 @@
 import UIKit
 
 class ConferenceDetailTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var conferenceFlag: UILabel!
     @IBOutlet weak var conferenceTitle: UILabel!
     @IBOutlet weak var conferenceDate: UILabel!
     @IBOutlet weak var conferenceFavorite: UIButton!
@@ -26,6 +27,7 @@ class ConferenceDetailTableViewCell: UITableViewCell {
 
     func setup(with conference: Conference, remove: Int) {
         self.conference = conference
+        conferenceFlag.text = conference.emojiflag
         conferenceTitle.text = conference.title
         conferenceDate.text = conference.startdate.replacingOccurrences(of: "\(remove)/", with: "")
         conferenceFavorite.tintColor = .awesomeColor
