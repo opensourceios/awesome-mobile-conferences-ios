@@ -38,7 +38,7 @@ extension AppDelegate {
 
         // WARN: Replace 'YOUR_APP_ID' with your OneSignal App ID.
         OneSignal.initWithLaunchOptions(launchOptions,
-                                        appId: "YOUR_APP_ID",
+                                        appId: "REPLACE",
                                         handleNotificationAction: nil,
                                         settings: onesignalInitSettings)
 

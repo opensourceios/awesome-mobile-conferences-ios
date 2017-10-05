@@ -130,6 +130,9 @@ extension ConferenceListViewController {
              // sort by start date
              return data.conferences.sorted(by: {(a, b) -> Bool in
                 return a.start! < b.start!
+             }).filter({ conference -> Bool in
+                guard let date = conference.start else { return false }
+                return date >= Date()
              })
         }
         return nil
