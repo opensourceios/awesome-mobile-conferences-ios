@@ -40,6 +40,6 @@ class ConferenceDetailTableViewCell: UITableViewCell {
 
     private func updateButtonUI() {
         guard let conference = conference else { return }
-        conferenceFavorite.alpha = conference.isFavorite ? 1.0 : 0.5
+        conferenceFavorite.alpha = conference.isFavorite ? 1.0 : 0.3
     }
 }
