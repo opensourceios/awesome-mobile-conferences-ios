@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -54,17 +54,29 @@
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ckd-kH-DXa">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGc-z0-O1V">
                                                             <rect key="frame" x="327" y="0.0" width="32" height="31.5"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ckd-kH-DXa">
+                                                                    <rect key="frame" x="8" y="8" width="16" height="16"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="16" id="Cud-46-Uub"/>
+                                                                        <constraint firstAttribute="width" constant="16" id="CyR-JK-L7X"/>
+                                                                    </constraints>
+                                                                    <state key="normal" image="heart_deselected"/>
+                                                                    <state key="selected" image="heart_selected"/>
+                                                                    <connections>
+                                                                        <action selector="triggerFavorite" destination="7o2-R6-n8x" eventType="touchUpInside" id="xq5-FH-qh9"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="32" id="qCZ-Dz-YJK"/>
+                                                                <constraint firstItem="Ckd-kH-DXa" firstAttribute="centerX" secondItem="xGc-z0-O1V" secondAttribute="centerX" id="ORr-di-5bb"/>
+                                                                <constraint firstAttribute="width" constant="32" id="OaW-Rd-hwC"/>
+                                                                <constraint firstItem="Ckd-kH-DXa" firstAttribute="centerY" secondItem="xGc-z0-O1V" secondAttribute="centerY" id="si3-kx-95t"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                            <state key="normal" title="♥︎"/>
-                                                            <connections>
-                                                                <action selector="triggerFavorite" destination="7o2-R6-n8x" eventType="touchUpInside" id="xq5-FH-qh9"/>
-                                                            </connections>
-                                                        </button>
+                                                        </view>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
@@ -150,4 +162,8 @@
             <point key="canvasLocation" x="-178" y="-55"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart_deselected" width="54" height="50"/>
+        <image name="heart_selected" width="54" height="50"/>
+    </resources>
 </document>

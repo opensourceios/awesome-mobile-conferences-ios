@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (4.5.1)
   - Exteptional (0.2.6)
-  - OneSignal (2.5.4)
+  - OneSignal (2.5.6)
   - SwiftDate (4.4.1)
 
 DEPENDENCIES:
@@ -13,7 +13,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   Exteptional: b8aa08121998a6bf40a55fe9496b2b8ac192048c
-  OneSignal: da994bcf6a2efbdceaf71e389e1d05245c562899
+  OneSignal: 9ec286d9156b86b3975f45d928e70f46c74ef4b7
   SwiftDate: a70a534d4feed03b2a2b575e36bef82dc2286a8d
 
 PODFILE CHECKSUM: 4a0d8af1f0714e9b3f69568c7d5605d0602985e1
