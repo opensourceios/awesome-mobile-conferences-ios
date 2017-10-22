@@ -18,22 +18,27 @@ class ConferenceDetailViewController: BaseViewController {
     @IBOutlet weak var countryLabel: UILabel!
 
     @IBOutlet weak var mapView: MKMapView!
-
+    
     var conference: Conference?
 
     private let geoCoder = CLGeocoder()
+    private var favoriteButton: UIBarButtonItem?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // set title
         title = conference?.title
-
+        
         // set navigation
         navigationItem.hidesSearchBarWhenScrolling = true
         navigationItem.hidesBackButton = false
         navigationItem.largeTitleDisplayMode = .automatic
         navigationController?.navigationBar.tintColor = .awesomeColor
-
+        
+        // set favorite button base status
+        favoriteButton = UIBarButtonItem(image: #imageLiteral(resourceName: "heart_deselected"), style: .plain, target: self, action: #selector(ConferenceDetailViewController.tapFavorite))
+        navigationItem.rightBarButtonItem = favoriteButton
+        
         // set button tint
         websiteButton.tintColor = .awesomeColor
 
@@ -43,7 +48,6 @@ class ConferenceDetailViewController: BaseViewController {
 
         // populate UI
         populateUI()
-
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -71,6 +75,16 @@ extension ConferenceDetailViewController {
         startDateLabel.text = conference.startdate
         endDateLabel.text = conference.enddate
         countryLabel.text = conference.country
+        
+        // set current favorite status
+        updateFavoriteUI()
+    }
+    
+    fileprivate func updateFavoriteUI() {
+        guard let conference = conference else { return }
+        favoriteButton = conference.isFavorite ? UIBarButtonItem(image: #imageLiteral(resourceName: "heart_selected"), style: .plain, target: self, action: #selector(ConferenceDetailViewController.tapFavorite)) : UIBarButtonItem(image: #imageLiteral(resourceName: "heart_deselected"), style: .plain, target: self, action: #selector(ConferenceDetailViewController.tapFavorite))
+        navigationItem.rightBarButtonItem = favoriteButton
+
     }
 
     fileprivate func populateMap() {
@@ -81,6 +95,15 @@ extension ConferenceDetailViewController {
 
 // MARK: - Action
 extension ConferenceDetailViewController {
+    
+    @objc func tapFavorite() {
+        if var conference = conference {
+            conference.isFavorite = !conference.isFavorite
+        }
+        // update UI
+        updateFavoriteUI()
+    }
+    
     @IBAction func openLink() {
         guard let conference = conference, let url = URL(string: conference.homepage) else { return }
         UIApplication.shared.open(url)
