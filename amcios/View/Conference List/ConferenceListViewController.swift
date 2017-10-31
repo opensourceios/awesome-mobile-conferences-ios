@@ -77,10 +77,14 @@ class ConferenceListViewController: BaseViewController {
     }
 
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let vc = segue.destination as? ConferenceDetailViewController else { return }
-        guard let index = table.indexPathForSelectedRow else { return }
+        guard
+            let vc = segue.destination as? ConferenceDetailViewController,
+            let index = table.indexPathForSelectedRow,
+            let conference = getItem(index)
+            else { return }
+    
 
-        vc.conference = getItem(index)
+        vc.conference = conference
         table.deselectRow(at: index, animated: true)
     }
 
@@ -195,8 +199,11 @@ extension ConferenceListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "conferenceCell") as! ConferenceDetailTableViewCell
-        let year = MemoryDb.shared.data?.years[indexPath.section]
-        cell.setup(with: getItem(indexPath), remove: year ?? 0)
+        guard
+            let year = MemoryDb.shared.data?.years[indexPath.section],
+            let conference = getItem(indexPath)
+            else { return cell }
+        cell.setup(with: conference, remove: year)
         return cell
     }
 }
@@ -212,8 +219,8 @@ extension ConferenceListViewController: UITableViewDelegate {
         performSegue(withIdentifier: "showDetail", sender: self)
     }
 
-    func getItem(_ index: IndexPath) -> Conference {
-        let year = MemoryDb.shared.data?.years[index.section]
+    func getItem(_ index: IndexPath) -> Conference? {
+        guard let year = MemoryDb.shared.data?.years[index.section] else { return nil }
 
         // is search active?
         var items = isSearchActive ? filteredConferences : conferences
@@ -230,6 +237,6 @@ extension ConferenceListViewController: UITableViewDelegate {
             return conf.year == year
         })
 
-        return items![index.row]
+        return items?[index.row]
     }
 }
