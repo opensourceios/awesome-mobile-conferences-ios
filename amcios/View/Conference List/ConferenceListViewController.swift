@@ -54,9 +54,6 @@ class ConferenceListViewController: BaseViewController {
 
         title = "Conferences"
 
-        // add refresh control
-        table.refreshControl = refreshControl
-
         // set extra stuff for navigation bar
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
@@ -74,6 +71,9 @@ class ConferenceListViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         getRemoteData()
+        
+        // add refresh control
+        table.refreshControl = refreshControl
     }
 
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
