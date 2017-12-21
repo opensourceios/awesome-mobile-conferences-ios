@@ -13,6 +13,7 @@ struct Conference: Codable {
     let year: Int
     let startdate: String
     let enddate: String
+    let city: String
     let location: String
     let homepage: String
     let country: String
@@ -55,6 +56,7 @@ struct Conference: Codable {
         case callforpaper
         case emojiflag
         case topics
+        case city
 
         case location = "where"
         case isNew = "isnew"
