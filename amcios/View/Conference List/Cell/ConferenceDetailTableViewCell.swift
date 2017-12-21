@@ -29,8 +29,12 @@ class ConferenceDetailTableViewCell: UITableViewCell {
         self.conference = conference
         conferenceFlag.text = conference.emojiflag
         conferenceTitle.text = conference.title
-        // TODO: improve date
-        conferenceDate.text = conference.startdate
+
+        if conference.enddate != conference.startdate {
+            conferenceDate.text = (conference.start?.toString(dateFormat: "dd") ?? "") + " - " + (conference.end?.toString(dateFormat: "dd") ?? "")
+        } else {
+            conferenceDate.text = conference.start?.toString(dateFormat: "dd") ?? ""
+        }
         conferenceFavorite.tintColor = .awesomeColor
         updateButtonUI()
     }
