@@ -16,6 +16,7 @@ class ConferenceDetailViewController: BaseViewController {
     @IBOutlet weak var startDateLabel: UILabel!
     @IBOutlet weak var endDateLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var topicsLabel: UILabel!
     @IBOutlet weak var topicField: UIStackView!
 
@@ -77,6 +78,7 @@ extension ConferenceDetailViewController {
         startDateLabel.text = conference.startdate
         endDateLabel.text = conference.enddate
         countryLabel.text = conference.country
+        cityLabel.text = conference.city
         if let topics = conference.topics {
             topicField.isHidden = false
             let content = topics.reduce("", { (result, topic) -> String in

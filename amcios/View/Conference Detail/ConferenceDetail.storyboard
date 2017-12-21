@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="K5H-L8-W3h">
-                                        <rect key="frame" x="0.0" y="8" width="375" height="556"/>
+                                        <rect key="frame" x="0.0" y="8" width="375" height="575.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kSR-F1-cAZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="68.5"/>
@@ -71,7 +71,7 @@
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oRa-sx-3Pl">
-                                                <rect key="frame" x="0.0" y="80.5" width="375" height="49"/>
+                                                <rect key="frame" x="0.0" y="80.5" width="375" height="68.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Where" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oa3-s0-67K">
                                                         <rect key="frame" x="8" y="8" width="359" height="13.5"/>
@@ -79,8 +79,25 @@
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OB8-y5-WBu">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7kG-eG-qJw">
                                                         <rect key="frame" x="8" y="21.5" width="359" height="19.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="City:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOj-Xh-55Z">
+                                                                <rect key="frame" x="0.0" y="0.0" width="175.5" height="19.5"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwP-ub-FZp">
+                                                                <rect key="frame" x="183.5" y="0.0" width="175.5" height="19.5"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OB8-y5-WBu">
+                                                        <rect key="frame" x="8" y="41" width="359" height="19.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Country:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocn-qE-Kdl">
                                                                 <rect key="frame" x="0.0" y="0.0" width="175.5" height="19.5"/>
@@ -100,7 +117,7 @@
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yPD-Xy-TVx">
-                                                <rect key="frame" x="0.0" y="141.5" width="375" height="49"/>
+                                                <rect key="frame" x="0.0" y="161" width="375" height="49"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Topics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ke5-YP-faK">
                                                         <rect key="frame" x="8" y="8" width="359" height="13.5"/>
@@ -118,7 +135,7 @@
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mLz-9v-wCw">
-                                                <rect key="frame" x="0.0" y="202.5" width="375" height="61.5"/>
+                                                <rect key="frame" x="0.0" y="222" width="375" height="61.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Website" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qK-LP-UeP">
                                                         <rect key="frame" x="8" y="8" width="359" height="13.5"/>
@@ -138,7 +155,7 @@
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                             </stackView>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="251" mapType="standard" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uO8-FH-xkc">
-                                                <rect key="frame" x="0.0" y="276" width="375" height="280"/>
+                                                <rect key="frame" x="0.0" y="295.5" width="375" height="280"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="280" id="EWe-VI-l66"/>
                                                 </constraints>
@@ -169,6 +186,7 @@
                         <viewLayoutGuide key="safeArea" id="5Qn-lc-pLY"/>
                     </view>
                     <connections>
+                        <outlet property="cityLabel" destination="BwP-ub-FZp" id="c2i-bG-iDd"/>
                         <outlet property="countryLabel" destination="4l7-2T-Wy4" id="jPV-Bc-8Z5"/>
                         <outlet property="endDateLabel" destination="KIH-2p-4LU" id="K0v-H4-0bM"/>
                         <outlet property="mapView" destination="uO8-FH-xkc" id="SQh-U5-G9N"/>
