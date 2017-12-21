@@ -16,6 +16,7 @@ class ConferenceDetailViewController: BaseViewController {
     @IBOutlet weak var startDateLabel: UILabel!
     @IBOutlet weak var endDateLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var topicsLabel: UILabel!
 
     @IBOutlet weak var mapView: MKMapView!
     
@@ -75,6 +76,9 @@ extension ConferenceDetailViewController {
         startDateLabel.text = conference.startdate
         endDateLabel.text = conference.enddate
         countryLabel.text = conference.country
+        topicsLabel.text = conference.topics.reduce("", { (result, topic) -> String in
+            return result + "\(topic), "
+        })
         
         // set current favorite status
         updateFavoriteUI()
