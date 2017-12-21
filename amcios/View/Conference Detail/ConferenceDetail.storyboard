@@ -108,7 +108,7 @@
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VG-Qb-Goa">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VG-Qb-Goa">
                                                         <rect key="frame" x="8" y="21.5" width="359" height="19.5"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                                         <nil key="textColor"/>
@@ -173,6 +173,8 @@
                         <outlet property="endDateLabel" destination="KIH-2p-4LU" id="K0v-H4-0bM"/>
                         <outlet property="mapView" destination="uO8-FH-xkc" id="SQh-U5-G9N"/>
                         <outlet property="startDateLabel" destination="Yfr-9h-qp2" id="bQq-gd-Bek"/>
+                        <outlet property="topicField" destination="yPD-Xy-TVx" id="NLD-ox-o23"/>
+                        <outlet property="topicsLabel" destination="1VG-Qb-Goa" id="51f-mm-cEi"/>
                         <outlet property="websiteButton" destination="BRu-rH-wRd" id="cOn-Fg-1zT"/>
                     </connections>
                 </viewController>
