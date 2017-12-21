@@ -19,7 +19,7 @@ struct Conference: Codable {
     let emojiflag: String
     let callforpaper: Bool
     let isNew: Bool
-    let topics: [String]
+    let topics: [String]?
 
     /// runtime value useful for sorting
     var start: Date? {
