@@ -18,12 +18,19 @@ struct Conference: Codable {
     let country: String
     let emojiflag: String
     let callforpaper: Bool
+    let isNew: Bool
 
     /// runtime value useful for sorting
-    private var dateFormatter = DateFormatter()
     var start: Date? {
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd"
         return dateFormatter.date(from: startdate)
+    }
+    
+    /// return current year/month
+    var yearMonth: String {
+        guard let start = start else { return "" }
+        return start.toString(dateFormat: "yyyy / MMMM").capitalized
     }
 
     /// Check if project is favorite locally (sync via iCloud)
@@ -38,7 +45,6 @@ struct Conference: Codable {
     }
 
     enum CodingKeys: String, CodingKey {
-
         case title
         case year
         case startdate
@@ -49,5 +55,6 @@ struct Conference: Codable {
         case emojiflag
 
         case location = "where"
+        case isNew = "isnew"
     }
 }
