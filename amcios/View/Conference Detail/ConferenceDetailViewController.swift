@@ -79,9 +79,10 @@ extension ConferenceDetailViewController {
         countryLabel.text = conference.country
         if let topics = conference.topics {
             topicField.isHidden = false
-            topicsLabel.text = topics.reduce("", { (result, topic) -> String in
-                return result + "\(topic), "
+            let content = topics.reduce("", { (result, topic) -> String in
+                return result + "\(topic),"
             })
+            topicsLabel.text = String(content.dropLast())
         } else {
             topicField.isHidden = true
         }
