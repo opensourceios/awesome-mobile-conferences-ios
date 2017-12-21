@@ -28,6 +28,11 @@ struct Conference: Codable {
         dateFormatter.dateFormat = "yyyy/MM/dd"
         return dateFormatter.date(from: startdate)
     }
+    var end: Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        return dateFormatter.date(from: enddate)
+    }
     
     /// return current year/month
     var yearMonth: String {
