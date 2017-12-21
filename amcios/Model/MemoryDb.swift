@@ -21,16 +21,7 @@ class MemoryDb {
     }
     
     /// Contains the headers for the list view
-    var headers: [String] {
-        guard let data = data else { return [] }
-        return data.conferences.reduce([]) { (curr, conf) -> [String] in
-            var tmp = curr
-            if(!curr.contains(conf.yearMonth)) {
-                tmp.append(conf.yearMonth)
-            }
-            return tmp
-        }
-    }
+    var headers = [String]()
 
     /// Contains last update date
     var lastUpdate = Date()

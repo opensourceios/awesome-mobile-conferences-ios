@@ -118,7 +118,32 @@ extension ConferenceListViewController {
         if let data = AMCApi.getData() {
             // parse json
             parseJson(from: data)
-
+            
+            // populate headers
+            if let data = MemoryDb.shared.data {
+                // populate headers
+                let sorted = data.conferences.sorted { (conf1, conf2) -> Bool in
+                    guard let c1 = conf1.start, let c2 = conf2.start else { return false }
+                    return c1 < c2
+                    }.filter({ conference -> Bool in
+                        guard let date = conference.start else { return false }
+                        return date >= Date()
+                    })
+                
+                MemoryDb.shared.headers = sorted.reduce([]) { (curr, conf) -> [String] in
+                    var tmp = curr
+                    if(!curr.contains(conf.yearMonth)) {
+                        tmp.append(conf.yearMonth)
+                    }
+                    return tmp
+                }
+            } else {
+                MemoryDb.shared.headers = []
+            }
+            
+            // force refresh
+            table.reloadData()
+            
             // stop refreshing
             refreshControl.endRefreshing()
         }
@@ -175,11 +200,12 @@ extension ConferenceListViewController {
 // MARK: - Data source
 extension ConferenceListViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return MemoryDb.shared.data?.years.count ?? 0
+        return MemoryDb.shared.headers.count
+        //return MemoryDb.shared.data?.years.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let year = MemoryDb.shared.data?.years[section] else { return 0 }
+        let yearMonth = MemoryDb.shared.headers[section]
 
         // is search active?
         var items = isSearchActive ? filteredConferences : conferences
@@ -193,17 +219,16 @@ extension ConferenceListViewController: UITableViewDataSource {
 
         // return items
         return items?.filter({ conf -> Bool in
-            return conf.year == year
+            return conf.yearMonth == yearMonth
         }).count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "conferenceCell") as! ConferenceDetailTableViewCell
         guard
-            let year = MemoryDb.shared.data?.years[indexPath.section],
             let conference = getItem(indexPath)
             else { return cell }
-        cell.setup(with: conference, remove: year)
+        cell.setup(with: conference)
         return cell
     }
 }
@@ -211,8 +236,7 @@ extension ConferenceListViewController: UITableViewDataSource {
 // MARK: - Table delegate
 extension ConferenceListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let year = MemoryDb.shared.data?.years[section] ?? 0
-        return "\(year)"
+        return MemoryDb.shared.headers[section]
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -220,7 +244,8 @@ extension ConferenceListViewController: UITableViewDelegate {
     }
 
     func getItem(_ index: IndexPath) -> Conference? {
-        guard let year = MemoryDb.shared.data?.years[index.section] else { return nil }
+        
+        let yearMonth = MemoryDb.shared.headers[index.section]
 
         // is search active?
         var items = isSearchActive ? filteredConferences : conferences
@@ -234,7 +259,7 @@ extension ConferenceListViewController: UITableViewDelegate {
 
         // clean items
         items = items?.filter({ conf -> Bool in
-            return conf.year == year
+            return conf.yearMonth == yearMonth
         })
 
         return items?[index.row]

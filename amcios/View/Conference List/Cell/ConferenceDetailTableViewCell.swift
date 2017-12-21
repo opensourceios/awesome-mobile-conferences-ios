@@ -25,11 +25,12 @@ class ConferenceDetailTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    func setup(with conference: Conference, remove: Int) {
+    func setup(with conference: Conference) {
         self.conference = conference
         conferenceFlag.text = conference.emojiflag
         conferenceTitle.text = conference.title
-        conferenceDate.text = conference.startdate.replacingOccurrences(of: "\(remove)/", with: "")
+        // TODO: improve date
+        conferenceDate.text = conference.startdate
         conferenceFavorite.tintColor = .awesomeColor
         updateButtonUI()
     }
